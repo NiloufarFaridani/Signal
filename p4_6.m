@@ -1,0 +1,10 @@
+[x,fsx]=audioread("x_test.wav");
+[y,fsy]=audioread("y_test.wav");
+[r,lag]=xcorr(x,y);
+plot(lag,r);
+n0=5512;
+a=1111/384.5;
+disp("a=");
+disp(a);
+disp("n0=");
+disp(n0);

@@ -1,0 +1,12 @@
+[x,fs] = audioread('q4.wav');
+disp("frequency:");
+disp(fs);
+%sound(x, fs); 
+time=(1:length(x))/fs;
+figure;
+legend;
+xlabel('Time');
+ylabel('Amplitude'); 
+plot(time,x); 
+filename = 'x.wav';
+audiowrite(filename,x,fs);
